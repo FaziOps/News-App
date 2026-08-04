@@ -1,0 +1,41 @@
+/// Represents a single news article returned by NewsAPI.org.
+///
+/// All fields are nullable-safe on parse: NewsAPI frequently returns nulls
+/// for `description`, `urlToImage`, and `author`, so we default those to
+/// empty strings / null rather than letting a null propagate and crash a
+/// widget that assumes a String.
+class Article {
+  final String title;
+  final String? description;
+  final String? urlToImage;
+  final String publishedAt;
+  final String url;
+  final String sourceName;
+  final String? author;
+
+  Article({
+    required this.title,
+    required this.description,
+    required this.urlToImage,
+    required this.publishedAt,
+    required this.url,
+    required this.sourceName,
+    required this.author,
+  });
+
+  factory Article.fromJson(Map<String, dynamic> json) {
+    return Article(
+      title: (json['title'] as String?)?.trim().isNotEmpty == true
+          ? json['title'] as String
+          : 'Untitled article',
+      description: json['description'] as String?,
+      urlToImage: json['urlToImage'] as String?,
+      publishedAt: json['publishedAt'] as String? ?? '',
+      url: json['url'] as String? ?? '',
+      sourceName: (json['source'] as Map<String, dynamic>?)?['name']
+              as String? ??
+          'Unknown source',
+      author: json['author'] as String?,
+    );
+  }
+}
