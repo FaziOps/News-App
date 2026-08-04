@@ -9,7 +9,7 @@
 /// you at 100 requests/day, so this key is not viable for a public release
 /// regardless of where it lives.
 class ApiConstants {
-  static const String apiKey = '152183beec6e41eeab74d9dd274d15ef';
+  static const String apiKey = '';
   static const String baseUrl = 'https://newsapi.org/v2';
 
   static const String topHeadlines = '$baseUrl/top-headlines';
