@@ -12,6 +12,7 @@ class Article {
   final String url;
   final String sourceName;
   final String? author;
+  final String? content;
 
   Article({
     required this.title,
@@ -21,7 +22,19 @@ class Article {
     required this.url,
     required this.sourceName,
     required this.author,
+    this.content,
   });
+
+  /// Returns cleaned up body content without the NewsAPI `[+123 chars]` suffix,
+  /// or falls back to description if content is null or empty.
+  String get displayContent {
+    final raw = (content != null && content!.trim().isNotEmpty)
+        ? content!
+        : (description ?? '');
+    // Remove pattern like [+1234 chars] from the end of NewsAPI body text
+    final cleaned = raw.replaceAll(RegExp(r'\s*\[\+\d+\s+chars\]'), '');
+    return cleaned.trim();
+  }
 
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
@@ -36,6 +49,7 @@ class Article {
               as String? ??
           'Unknown source',
       author: json['author'] as String?,
+      content: json['content'] as String?,
     );
   }
 }
