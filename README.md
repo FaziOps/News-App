@@ -21,18 +21,18 @@ version resolution issues before assuming it runs clean.
 
 ```
 lib/
-  main.dart                    App entry, theme, root provider
-  models/article.dart          Null-safe Article model
-  services/news_api_service.dart   All NewsAPI HTTP calls
-  providers/home_provider.dart     Home screen state (source + both lists)
-  providers/category_provider.dart Category screen state (per-tab, lazy)
-  screens/home_screen.dart     2/3–1/3 split layout
-  screens/category_screen.dart 7-tab category browser
-  widgets/glass_container.dart Core glass morphism panel + background
-  widgets/article_card.dart    Article row (image, title, tap-to-open)
-  widgets/source_picker.dart   Vertical-dots source menu
-  widgets/state_views.dart     Loading / error / empty states
-  utils/constants.dart         API key, source IDs, category list
+  main.dart                            App entry, theme, root provider
+  models/article.dart                  Null-safe Article model
+  services/news_api_service.dart       All NewsAPI HTTP calls
+  providers/home_provider.dart         Home screen state (source + both lists)
+  providers/category_provider.dart     Category screen state (per-tab, lazy)
+  screens/home_screen.dart             2/3–1/3 split layout
+  screens/category_screen.dart         7-tab category browser
+  widgets/glass_container.dart         Core glass morphism panel + background
+  widgets/article_card.dart            Article row (image, title, tap-to-open)
+  widgets/source_picker.dart           Vertical-dots source menu
+  widgets/state_views.dart             Loading / error / empty states
+  utils/constants.dart                 API key, source IDs, category list
 ```
 
 ## Design decisions worth knowing about
