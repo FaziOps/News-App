@@ -3,12 +3,14 @@
 A NewsAPI.org-backed news reader with a glass morphism UI, built to the
 attached PRD (2/3–1/3 home split, source picker, 7-category tab screen).
 
+
 ## Setup
 
 ```
 flutter pub get
 flutter run
 ```
+
 
 Requires Flutter 3.x+ (Dart 3+). Not verified against a live `flutter run`
 in this environment — no Flutter SDK or network access to pub.dev was
@@ -35,6 +37,7 @@ lib/
 
 ## Design decisions worth knowing about
 
+
 - **Category tabs load lazily.** Opening the Category screen doesn't fire
   7 requests at once — each tab fetches on first view and caches the
   result. On a 100-requests/day free key, firing all 7 up front would burn
@@ -47,7 +50,9 @@ lib/
   Material Design convention of top-right. Implemented as specified — flag
   this with your supervisor if it wasn't a deliberate call.
 
+
 ## Known limitations — read before calling this "production-ready"
+
 
 1. **The API key is hardcoded in `lib/utils/constants.dart`.** It ships
    inside the compiled app and is trivially extractable from the APK/IPA.
