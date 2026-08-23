@@ -68,7 +68,8 @@ lib/
    client), but you are not compliant with NewsAPI's terms if you publish
    this. Business plan starts at $449/month if you need to go live
    legitimately.
-4. **Not compiled/tested end-to-end.** Every file was written and
-   manually reviewed for type correctness, null-safety, and import
+4. **Not compiled/tested end-to-end.** 
+
+   Every file was written and manually reviewed for type correctness, null-safety, and import
    correctness, but no `flutter analyze` or `flutter run` was executed
    against it. Run `flutter analyze` first thing after `pub get`.
