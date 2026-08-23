@@ -55,6 +55,7 @@ lib/
 
 
 1. **The API key is hardcoded in `lib/utils/constants.dart`.**
+
    It ships inside the compiled app and is trivially extractable from the APK/IPA.
    Fine for a dev build; not fine for public release. Fix: proxy all
    NewsAPI calls through your own backend and never embed the key
