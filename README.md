@@ -61,8 +61,9 @@ lib/
    NewsAPI calls through your own backend and never embed the key
    client-side.
 3. **NewsAPI.org's free Developer plan prohibits commercial/production
-   use in its Terms of Service** and caps requests at 100/day. This app
-   will function on real devices (the plan's CORS-localhost restriction
+   use in its Terms of Service** and caps requests at 100/day. 
+   
+   This app will function on real devices (the plan's CORS-localhost restriction
    is a browser-only mechanism and doesn't apply to Dart's native `http`
    client), but you are not compliant with NewsAPI's terms if you publish
    this. Business plan starts at $449/month if you need to go live
