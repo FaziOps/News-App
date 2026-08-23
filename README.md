@@ -54,19 +54,19 @@ lib/
 ## Known limitations — read before calling this "production-ready"
 
 
-1. **The API key is hardcoded in `lib/utils/constants.dart`.** It ships
-   inside the compiled app and is trivially extractable from the APK/IPA.
+1. **The API key is hardcoded in `lib/utils/constants.dart`.**
+   It ships inside the compiled app and is trivially extractable from the APK/IPA.
    Fine for a dev build; not fine for public release. Fix: proxy all
    NewsAPI calls through your own backend and never embed the key
    client-side.
-2. **NewsAPI.org's free Developer plan prohibits commercial/production
+3. **NewsAPI.org's free Developer plan prohibits commercial/production
    use in its Terms of Service** and caps requests at 100/day. This app
    will function on real devices (the plan's CORS-localhost restriction
    is a browser-only mechanism and doesn't apply to Dart's native `http`
    client), but you are not compliant with NewsAPI's terms if you publish
    this. Business plan starts at $449/month if you need to go live
    legitimately.
-3. **Not compiled/tested end-to-end.** Every file was written and
+4. **Not compiled/tested end-to-end.** Every file was written and
    manually reviewed for type correctness, null-safety, and import
    correctness, but no `flutter analyze` or `flutter run` was executed
    against it. Run `flutter analyze` first thing after `pub get`.
