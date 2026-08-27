@@ -39,7 +39,7 @@ class ArticleCard extends StatelessWidget {
       child: GlassContainer(
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         padding: const EdgeInsets.all(12),
-        borderRadius: 24, // Increased border radius for a modern feel
+        borderRadius: 24, // Increased border radius for a modern and fashionable feel
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -73,7 +73,7 @@ class ArticleCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Upper-cased spaced source and date
+                  // For Upper-cased spaced source and date
                   Text(
                     '${article.sourceName.toUpperCase()} · ${_formatDate(article.publishedAt)}',
                     style: TextStyle(
