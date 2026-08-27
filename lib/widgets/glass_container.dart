@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-/// The core glass morphism building block used across the app: a blurred,
+/// The core modern glass morphism building block used across the app: a blurred,
 /// semi-transparent panel with a subtle light border and soft shadow.
 /// Every card, button, and input field wraps this so the frosted look
 /// stays consistent instead of being reinvented per-screen.
@@ -72,8 +72,8 @@ class AppBackground extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [
-            Color(0xFF1E24B4), // Royal Blue / Indigo
+          colors: [ // Colors 
+            Color(0xFF1E24B4), // Royal Blue/Indigo
             Color(0xFF0F124A), // Deep Navy
             Color(0xFF070821), // Midnight Blue
           ],
