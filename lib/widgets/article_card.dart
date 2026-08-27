@@ -275,7 +275,7 @@ class FeaturedArticleCard extends StatelessWidget {
               ],
             ),
             
-            // Text Details Area below the image
+            // Text Details Area below the image source
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
