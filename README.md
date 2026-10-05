@@ -3,7 +3,6 @@
 A NewsAPI.org-backed news reader with a glass morphism UI, built to the
 attached PRD (2/3–1/3 home split, source picker, 7-category tab screen).
 
-
 ## Setup
 
 ```
