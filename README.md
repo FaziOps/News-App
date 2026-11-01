@@ -35,7 +35,6 @@ lib/
 
 ## Design decisions worth knowing about
 
-
 - **Category tabs load lazily.** Opening the Category screen doesn't fire
   7 requests at once — each tab fetches on first view and caches the
   result. On a 100-requests/day free key, firing all 7 up front would burn
