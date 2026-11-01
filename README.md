@@ -10,7 +10,6 @@ flutter pub get
 flutter run
 ```
 
-
 Requires Flutter 3.x+ (Dart 3+). Not verified against a live `flutter run`
 in this environment — no Flutter SDK or network access to pub.dev was
 available where this was built. Run `flutter pub get` first and fix any
