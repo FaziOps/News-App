@@ -51,7 +51,6 @@ lib/
 
 ## Known limitations — read before calling this "production-ready"
 
-
 1. **The API key is hardcoded in `lib/utils/constants.dart`.**
 
    It ships inside the compiled app and is trivially extractable from the APK/IPA.
